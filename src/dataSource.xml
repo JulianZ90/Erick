@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver" />
+		<property name="url"
+			value="jdbc:derby://localhost:1527/sampleSpring;create=true" />
+		<property name="username" value="admin" />
+		<property name="password" value="admin" />
+	</bean>
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated 14/08/2012 11:34:41 by Hibernate Tools 3.2.5.Beta -->
+<hibernate-mapping>
+	<class name="edu.curso.java.hibernate.model.Persona" table="PERSONA">
+		<id column="ID_PERSONA" name="id" type="java.lang.Long">
+			<generator class="increment" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="PHONE" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<bag name="tablets">
+			<key column="ID_PERSONA" />
+			<one-to-many class="edu.curso.java.hibernate.model.Tablet" />
+		</bag>
+	</class>
+</hibernate-mapping>

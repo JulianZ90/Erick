@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated 13/08/2012 17:02:38 by Hibernate Tools 3.2.5.Beta -->
+<hibernate-mapping>
+
+	<class name="edu.curso.java.hibernate.model.Tablet" table="TABLET">
+
+		<id name="id" column="ID_TABLET">
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="price" column="PRICE" />
+		<property name="operatingSystem" column="OPERATING_SYSTEM" />
+		<property name="capacity" column="CAPACITY" />
+
+	</class>
+
+</hibernate-mapping>

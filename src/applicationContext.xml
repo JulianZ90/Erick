@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<import resource="dataSource.xml" />
+	<import resource="hibernate.xml" />
+
+	<context:component-scan base-package="edu.curso.java" />
+
+	<bean id="personaDao" class="edu.curso.java.hibernate.dao.PersonaDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="tabletDao" class="edu.curso.java.hibernate.dao.TabletDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+</beans>
