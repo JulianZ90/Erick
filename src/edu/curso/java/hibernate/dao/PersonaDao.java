@@ -6,9 +6,21 @@ import edu.curso.java.hibernate.model.Persona;
 
 public class PersonaDao
         extends HibernateDaoSupport {
+	private String mensaje;
+	private Persona persona;
 
-    public Long guardarPersona(Persona persona) {
+
+	public Persona getPersona() {
+		return persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
+
+	public Long guardarPersona(Persona persona) {
         super.getHibernateTemplate().save(persona);
+     //   super.getSessionFactory();
         return persona.getId();
     }
 
@@ -27,5 +39,13 @@ public class PersonaDao
                 Persona.class, iCliente);
         return persona;
     }
+    
+    public String getMensaje() {
+		return mensaje;
+	}
+    
+    public void setMensaje(String mensaje) {
+		this.mensaje = mensaje;
+	}
 
 }

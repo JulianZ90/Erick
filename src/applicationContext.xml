@@ -15,11 +15,21 @@
 
 	<bean id="personaDao" class="edu.curso.java.hibernate.dao.PersonaDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
+		<property name="mensaje" value="HolaMundo"></property>
+		<property name="persona" ref="persona"></property>
 	</bean>
 
 	<bean id="tabletDao" class="edu.curso.java.hibernate.dao.TabletDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
+	<bean id="persona" class="edu.curso.java.hibernate.model.Persona">
+		<property name="id" value="1"></property>
+		<property name="name" value="Mauro"></property>
+		<property name="phone" value="15-2856-9616"></property>
+		<property name="address" value="Haedo"></property>
+	</bean>
 
+	
 
 </beans>
