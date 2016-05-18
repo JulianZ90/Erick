@@ -32,4 +32,12 @@ public class AlumnosServiceImpl implements AlumnosService {
         alumnos.add(alumno);
         return alumno;
     }
+    
+    public void deleteAlumno(@WebParam(name = "nombre", partName = "nombre") String nombre) {
+		List<Alumno> result = new ArrayList<Alumno>();
+		for (Alumno alumno : alumnos) {
+			if (alumno.getNombre().equals(nombre))
+				result.remove(alumno);
+			}
+	}
 }
