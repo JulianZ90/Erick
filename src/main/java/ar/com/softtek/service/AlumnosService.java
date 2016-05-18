@@ -16,4 +16,6 @@ public interface AlumnosService {
     Alumno saveAlumno(String nombre, String apellido);
     @WebMethod
     List<Alumno> getAlumnosByName(String nombre);
+    @WebMethod
+    void deleteAlumno(String nombre);
 }
